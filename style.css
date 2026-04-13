@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.topo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.topo p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.nova-tarefa {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nova-tarefa input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #d7dbe0;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.nova-tarefa input:focus {
+  border-color: #4a90e2;
+}
+
+.nova-tarefa button {
+  border: none;
+  background: #4a90e2;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nova-tarefa button:active {
+  transform: scale(0.98);
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  border: 1px solid #e7ebef;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.task-check {
+  width: 22px;
+  height: 22px;
+  accent-color: #4a90e2;
+  flex-shrink: 0;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  border: none;
+  background: #ff5c5c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 420px) {
+  .nova-tarefa {
+    flex-direction: column;
+  }
+
+  .nova-tarefa button {
+    width: 100%;
+  }
+}
